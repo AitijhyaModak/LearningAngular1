@@ -1,0 +1,40 @@
+<form (ngSubmit)="onSubmit()" class="bg-[#198050] w-fit mx-auto mt-12 p-5 rounded-md flex flex-col gap-5">
+
+    <div class="p-4">
+        <div class="flex gap-10">
+            <div class="flex flex-col gap-1">
+                <label for="initial_investment" class="text-[11px] text-white">INITIAL INVESTMENT</label>
+                <input min="0" name="initial_investment" id="initial_investment" type="number"
+                    class="bg-[#198050] border-2 border-green-300 rounded-md h-9 w-68 p-2 text-white"
+                    [(ngModel)]="input1">
+            </div>
+
+            <div class="flex flex-col gap-1">
+                <label for="annual_investment" class="text-[11px] text-white">ANNUAL INVESTMENT</label>
+                <input min="0" name="annual_investment" id="annual_investment" type="number"
+                    class="bg-[#198050] border-2 border-green-300 rounded-md h-9 w-68 p-2 text-white"
+                    [(ngModel)]="input2">
+            </div>
+        </div>
+
+        <div class="flex gap-10 mt-8">
+            <div class="flex flex-col gap-1">
+                <label for="expected_investment" class="text-[11px] text-white">EXPECTED RETURN</label>
+                <input min="0" name="expected_investment" id="expected_investment" type="number"
+                    class="bg-[#198050] border-2 border-green-300 rounded-md h-9 w-68 p-2 text-white"
+                    [(ngModel)]="input3">
+            </div>
+
+            <div class="flex flex-col gap-1">
+                <label for="duration" class="text-[11px] text-white">DURATION</label>
+                <input min="0" name="duration" id="duration" type="number"
+                    class="bg-[#198050] border-2 border-green-300 rounded-md h-9 w-68 p-2 text-white"
+                    [(ngModel)]="input4">
+            </div>
+        </div>
+
+    </div>
+
+
+    <button type="submit" class="bg-[#6ecdae] text-black h-9">CALCULATE</button>
+</form>

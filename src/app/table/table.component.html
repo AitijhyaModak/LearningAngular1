@@ -1,0 +1,32 @@
+<div class="flex justify-center mb-20">
+
+    @if(tableData.length !== 0) {
+    <table class="border-spacing-x-5 border-spacing-y-2 border-separate mt-12">
+        <thead>
+            <tr class="text-green-200 text-opacity-65 text-sm border-spacing-x-5 border-2">
+                <th>Year</th>
+                <th>Investment Value</th>
+                <th>Interest (year)</th>
+                <th>Total Interest</th>
+                <th>Invested Capital</th>
+            </tr>
+        </thead>
+
+        <tbody class="text-gray-400 text-right">
+            @for (row of tableData; track row.year) {
+            <tr>
+                <td>{{row.year}}</td>
+                <td>{{row.valueEndOfYear | currency: "INR"}}</td>
+                <td>{{row.interest | currency: "INR"}}</td>
+                <td>{{row.totalInterest | currency: "INR"}}</td>
+                <td>{{row.totalAmountInvested | currency: "INR"}}</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    }
+
+    @else {
+    <p class="text-gray-400 mt-7">Please enter some values and press "Calculate"</p>
+    }
+</div>
